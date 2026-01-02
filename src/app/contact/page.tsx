@@ -1,5 +1,6 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { ContactForm } from '@/components/features/contact/ContactForm'
 import { siteConfig } from '@/config/site'
 import type { Metadata } from 'next'
 
@@ -64,17 +65,10 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Contact Form Placeholder */}
+              {/* Contact Form */}
               <div className="rounded-lg bg-white p-8 shadow-sm">
                 <h2 className="mb-6 text-2xl font-bold text-gray-900">お問い合わせフォーム</h2>
-                <div className="rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 p-12 text-center">
-                  <p className="text-gray-600">
-                    お問い合わせフォームは準備中です
-                  </p>
-                  <p className="mt-2 text-sm text-gray-500">
-                    恐れ入りますが、お電話またはメールにてお問い合わせください
-                  </p>
-                </div>
+                <ContactForm />
               </div>
 
               {/* Access Info */}

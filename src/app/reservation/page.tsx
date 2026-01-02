@@ -1,5 +1,6 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { ReservationForm } from '@/components/features/reservation/ReservationForm'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -24,39 +25,12 @@ export default function ReservationPage() {
           </div>
         </section>
 
-        {/* Coming Soon */}
+        {/* Reservation Form */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
-              <div className="rounded-lg border-2 border-accent-200 bg-accent-50 p-12 text-center">
-                <div className="mb-6 text-6xl">🚧</div>
-                <h2 className="mb-4 text-2xl font-bold text-gray-900">
-                  オンライン予約システムは準備中です
-                </h2>
-                <p className="mb-8 text-gray-700">
-                  現在、オンライン予約システムを開発中です。
-                  <br />
-                  近日中にサービスを開始する予定です。
-                </p>
-                <div className="mx-auto max-w-md rounded-lg bg-white p-6">
-                  <h3 className="mb-4 font-bold text-gray-900">当面の予約方法</h3>
-                  <p className="mb-4 text-sm text-gray-600">
-                    恐れ入りますが、お電話にてご予約ください
-                  </p>
-                  <a
-                    href="tel:0256-XX-XXXX"
-                    className="block rounded-lg bg-primary-600 px-6 py-3 text-center font-medium text-white transition-colors hover:bg-primary-700"
-                  >
-                    📞 電話で予約する
-                  </a>
-                  <p className="mt-4 text-xs text-gray-500">
-                    診療時間内にお電話ください
-                    <br />
-                    平日: 9:00-12:00 / 14:00-18:00
-                    <br />
-                    土曜: 9:00-12:00
-                  </p>
-                </div>
+              <div className="rounded-lg bg-white p-8 shadow-sm">
+                <ReservationForm />
               </div>
 
               {/* Planned Features */}
