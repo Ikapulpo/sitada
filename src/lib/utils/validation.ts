@@ -11,12 +11,12 @@ export const reservationSchema = z.object({
     .regex(/^[0-9-]+$/, '電話番号は数字とハイフンのみで入力してください'),
   dateOfBirth: z.string().min(1, '生年月日を入力してください'),
   gender: z.enum(['MALE', 'FEMALE', 'OTHER'], {
-    errorMap: () => ({ message: '性別を選択してください' }),
+    message: '性別を選択してください',
   }),
   appointmentDate: z.string().min(1, '予約日を選択してください'),
   appointmentTime: z.string().min(1, '予約時間を選択してください'),
   department: z.enum(['INTERNAL_MEDICINE', 'SURGERY', 'PEDIATRICS', 'GENERAL'], {
-    errorMap: () => ({ message: '診療科を選択してください' }),
+    message: '診療科を選択してください',
   }),
   symptoms: z.string().optional(),
   notes: z.string().optional(),
